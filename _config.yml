@@ -31,7 +31,8 @@ twitter_username: jekyllrb
 github_username:  rileyzzz
 
 # Build settings
-theme: minima
+# https://pages.github.com/themes/
+theme: jekyll-theme-architect
 plugins:
   - jekyll-feed
 
