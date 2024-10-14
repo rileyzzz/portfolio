@@ -4,6 +4,16 @@ layout: default
 
 # My Portfolio
 
+My passion for creating digital experiences stems from my drive to innovate upon the experiences I love while also creating something new for audiences to enjoy.
+
+In my projects, I am motivated by a few core principles:
+- Always do something new.
+- Make a point of going outside the box.
+- Work on things people will love - creators AND players.
+- "Wow" the audience. With every project, my audience should always have at least one interesting takeaway.
+
+I'm inspired by beauty of a project that "just works". Whether that means a [simple Python script](https://github.com/rileyzzz/BlenderIMExporter) or a [custom-built compiler](https://github.com/rileyzzz/dextr), I excel at making lots of tiny pieces work in tandem to form an impressive whole.
+
 ## Retrogression
 
 Unity, C#, HLSL, Art, and Music
