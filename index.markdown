@@ -28,6 +28,7 @@ The IR translator is a C++ commandline app, and the encompassing tooling etc. ar
 The same reason Emscripten (in its original incarnation, before the days of WebAssembly) was created: "why not?"
 
 But the real reason is also the same as Emscripten's; JavaScript was created to solve the question of "how can we make a language that's safe enough to run unsupervised in your browser?", and Emscripten is the compiler nerd's way of getting around that so they can run unsafe pointer-heavy code in a "safe" way.
+DEX is very similar; it's designed for situations where you're not *allowed* to run anything except clean managed code.
 
 Facepunch Studios has been working on this new game platform called [s&box](https://sbox.game/about).
 If you haven't heard of s&box, it's basically just Roblox but with C# instead of Lua, and it runs on Source 2.
