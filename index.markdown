@@ -14,6 +14,33 @@ In my projects, I am motivated by a few core principles:
 
 I'm inspired by beauty of a project that "just works". Whether that means a [simple Python script](https://github.com/rileyzzz/BlenderIMExporter) or a [custom-built compiler](https://github.com/rileyzzz/dextr), I excel at making lots of tiny pieces work in tandem to form an impressive whole.
 
+
+## DEX
+
+An LLVM driver and Emscripten fork I wrote that can take C/C++ source code and translate it into *safe C#*.
+
+### Why?
+
+The same reason Emscripten (in its original incarnation, before the days of WebAssembly) was created: why not?
+But the real reason is also the same as Emscripten's; JavaScript was created to solve the question of "how can we make a language that's safe enough to run unsupervised in your browser?", and Emscripten is the compiler nerd's way of getting around that so they can run unsafe pointer-heavy code in a "safe" way.
+
+Facepunch Studios has been working on this new game platform called [s&box](https://sbox.game/about).
+If you haven't heard of s&box, it's basically just Roblox but with C# instead of Lua, and it runs on Source 2.
+Facepunch's way of making it safe to run untrusted C# on potentially thousands of computers is by using Roslyn and some fancy code analyzers to enforce a pretty restrictive code whitelist.
+And DEX is my way of getting around that, so I can run unsafe code in an environment where it's not supposed to be possible to run unsafe code.
+[You can read more here.](https://sbox.game/rileyzzz/retrobox/news/dex-8601de05)
+
+How?
+
+It's a lot like the original version of Emscripten before WebAssembly, but built from the ground up for C#; it'll take all of your C/C++ source code, compile it with clang, then instead of generating machine code, it hoists the LLVM IR instructions back up into C# expressions and tidies it up into a nice minfied module for you.
+The best part is it's completely safe. No pointers, syscalls, etc. Memory in DEX is a managed byte array.
+It features custom commandline tooling which mirrors that of Emscripten, and it's able to run anything that
+So far I've ported Doom, Quake, emulators like snes9x and mupen64plus, and LuaC.
+And turns out - the generated modules are actually wicked fast.
+Like, faster than it should be.
+.NET's JIT compiler has been kind of superpowered lately and somehow it's made DEX modules not only viable, but fast as hell.
+
+
 ## Retrogression
 
 Unity, C#, HLSL, Art, and Music
@@ -92,7 +119,7 @@ The tools were written in C++, and used OpenGL and Dear ImGUI to display a 3d pr
 
 I made the tools available to content creators in 2020, and they accumulated hundreds of downloads over several years.
 Since creating these tools, I have been employed as a developer at N3V Games.
-
+<!-- 
 ## Music Projects
 
 As a classically trained musician and Ableton enthusiast, I've created several original compositions, many for personal use in my game projects. Here are a few of them.
@@ -131,4 +158,4 @@ As the name suggests, heavy 80's/early-90's influence, with a cheesy steel drum 
 
 Couldn't resist making this when a friend sent me a pack of steam whistle sound effects.
 Very metal... slow buildup and then boom! Reminds me of a kettle boiling over.
-My main inspiration for the track was Mario Kart's 'Tick Tock Clock' level, as well as Animusic's 'Drum Machine' music video.
+My main inspiration for the track was Mario Kart's 'Tick Tock Clock' level, as well as Animusic's 'Drum Machine' music video. -->
