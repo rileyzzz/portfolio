@@ -4,7 +4,7 @@ layout: default
 
 # My Portfolio
 
-My passion for creating digital experiences stems from my drive to innovate upon the experiences I love while also creating something new for audiences to enjoy.
+My passion for creating digital media stems from my drive to innovate upon the experiences I love while also creating something new for audiences to enjoy.
 
 In my projects, I am motivated by a few core principles:
 - Always do something new.
