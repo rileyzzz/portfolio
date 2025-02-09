@@ -20,7 +20,8 @@ I'm inspired by beauty of a project that "just works". Whether that means a [sim
 An LLVM driver/Emscripten fork I wrote that can take C/C++ source code and translate it into *safe C#*.
 The IR translator is a C++ commandline app, and the encompassing tooling etc. are all written in Python.
 
-![Snippet from a generated DEX module](img/dex_0.png)
+#### Quake running in pure C#????
+![Quake in C#](img/dex_2.png)
 
 ### Why?
 
@@ -33,7 +34,9 @@ If you haven't heard of s&box, it's basically just Roblox but with C# instead of
 Facepunch's way of making it safe to run untrusted C# on potentially thousands of computers is by using Roslyn and some fancy code analyzers to enforce a pretty restrictive code whitelist.
 
 And DEX is my way of getting around that, so I can run unsafe code in an environment where it's not supposed to be possible to run unsafe code.
-[You can read more here.](https://sbox.game/rileyzzz/retrobox/news/dex-8601de05)
+[You can read more here. There's a ton of s&box-specific stuff I've added to the toolset, like a shader compiler, graphics commands, filesystem integration, and even a faux OpenGL driver - definitely worth a read.](https://sbox.game/rileyzzz/retrobox/news/dex-8601de05)
+
+![Snippet from a generated DEX module](img/dex_0.png)
 
 ### How?
 
