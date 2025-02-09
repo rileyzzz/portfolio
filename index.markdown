@@ -14,6 +14,22 @@ In my projects, I am motivated by a few core principles:
 
 I'm inspired by beauty of a project that "just works". Whether that means a [simple Python script](https://github.com/rileyzzz/BlenderIMExporter) or a [custom-built compiler](https://github.com/rileyzzz/dextr), I excel at making lots of tiny pieces work in tandem to form an impressive whole.
 
+## Trainz
+
+Since 2021, I've been employed by the Australia-based N3V Games.
+My primary responsiblity is the R&D and maintenance of the company's state of the art in-house graphics engine ‘E2’ (C++).
+
+This is the rendering engine behind the [Trainz series of games](https://store.steampowered.com/app/1784570/Trainz_Railroad_Simulator_2022/), which has shipped to millions of users worldwide across several platforms (Windows, iOS, Android, Mac, Xbox).
+
+![Trainz](img/trainz_0.jpg)
+
+My experience includes:
+* Implementation of new DX12 and Metal backends (C++, Obj-C).
+* Implemented support for compute shaders and indirect rendering into the engine across the supported graphics APIs (DX11, DX12, Metal).
+* Ported legacy ground clutter systems to a new GPU-driven approach; significant low-level shader optimizations for backwards compatibility with existing game levels while still remaining performant.
+* Designed and shipped a new scalable foliage rendering solution, created associated documentation to be used by community UGC creators.
+* Designed and implemented an engine-level imposter billboarding solution, built to handle heavy PBR scenes with ~100k objects in view (scheduled to be shipped in Q4 2024).
+* Quality assurance testing during my first few months at the company.
 
 ## DEX
 
