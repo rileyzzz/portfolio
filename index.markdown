@@ -17,8 +17,8 @@ I'm inspired by beauty of a project that "just works". Whether that means a [sim
 
 ## DEX
 
-An LLVM driver and Emscripten fork I wrote that can take C/C++ source code and translate it into *safe C#*.
-The IR translator is a commandline app written in C++20, and the encompassing tooling etc. are all written in Python.
+An LLVM driver/Emscripten fork I wrote that can take C/C++ source code and translate it into *safe C#*.
+The IR translator is a C++ commandline app, and the encompassing tooling etc. are all written in Python.
 
 ![Snippet from a generated DEX module](img/dex_0.png)
 
