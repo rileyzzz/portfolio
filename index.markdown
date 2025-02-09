@@ -82,7 +82,8 @@ A completely custom "fuzz"/painterly renderer I created over the course of a wee
 
 The tech is completely GPU driven, written in HLSL - the fuzz is generated as a point cloud in a compute shader, and then spatially clustered to allow for continuous LOD, followed by another compute shader to create the billboard card geometry and build up the indirect drawcalls needed for rendering.
 
-Compared to Dreams's renderer which uses distance fields, Fuzzworld instead uses a GPU-based implementation of [Wang & Suda 2018](https://dl.acm.org/doi/10.1145/3233310) to evenly distribute Poisson disc samples onto a triangle mesh. 
+Compared to Dreams's renderer (which uses distance fields), I instead implemented [Wang & Suda 2018](https://dl.acm.org/doi/10.1145/3233310) on the GPU to evenly distribute Poisson disc samples onto a triangle mesh.
+The generated geometry uses alpha-to-coverage for OIT, so it's pretty efficient to render aswell. 
 
 ![Fuzz pic 1](img/fuzz_1.png)
 ![Fuzz pic 2](img/fuzz_2.png)
