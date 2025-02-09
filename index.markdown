@@ -35,7 +35,7 @@ If you haven't heard of s&box, it's basically just Roblox but with C# instead of
 Facepunch's way of making it safe to run untrusted C# on potentially thousands of computers is by using Roslyn and some fancy code analyzers to enforce a pretty restrictive code whitelist.
 
 And DEX is my way of getting around that, so I can run unsafe code in an environment where it's not supposed to be possible to run unsafe code.
-[You can read more here. There's a ton of s&box-specific stuff I've added to the toolset, like a shader compiler, graphics commands, filesystem integration, and even a faux OpenGL driver - definitely worth a read.](https://sbox.game/rileyzzz/retrobox/news/dex-8601de05)
+[You can read more here. There's a ton of s&box-specific stuff I've added to the toolset](https://sbox.game/rileyzzz/retrobox/news/dex-8601de05), like a shader compiler, filesystem integration, and even a faux OpenGL driver - definitely worth a read.
 
 ![Snippet from a generated DEX module](img/dex_0.png)
 
