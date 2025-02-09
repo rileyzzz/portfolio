@@ -74,6 +74,19 @@ So, I wrote a little **homebrew physics engine** on top of Unity's PhysX that al
 I also put together a **fully custom player controller** to replace Unity's builtin player movement physics.
 Valve's Portal was a heavy inpiration for this project, so I researched the Source engine movement behavior and took the time to emulate the classic Half-Life walk and run speed, crouch-jumping, ground friction, etc in the game. We wanted to subconsciously trick the player into thinking they were playing Portal despite our game being made in Unity 😃
 
+## Fuzzworld
+
+A completely custom "fuzz"/painterly renderer I created over the course of a week, inspired by Media Molecule's 'Dreams' renderer.
+
+![Fuzz pic](img/fuzz_0.png)
+
+The tech is completely GPU driven, written in HLSL - the fuzz is generated as a pointcloud in a compute shader, and then spatially clustered to allow for continuous LOD, followed by another compute shader to build up the indirect drawcalls needed for rendering.
+
+Compared to Dreams's renderer which uses distance fields, Fuzzworld instead uses a GPU-based implementation of [Wang & Suda 2018](https://dl.acm.org/doi/10.1145/3233310) to evenly distribute Poisson disc samples onto a triangle mesh. 
+
+![Fuzz pic 1](img/fuzz_1.png)
+![Fuzz pic 2](img/fuzz_2.png)
+
 ## TMCCInterface
 
 [C++, available on GitHub](https://github.com/rileyzzz/TMCCInterface)
