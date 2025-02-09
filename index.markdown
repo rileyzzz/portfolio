@@ -18,6 +18,9 @@ I'm inspired by beauty of a project that "just works". Whether that means a [sim
 ## DEX
 
 An LLVM driver and Emscripten fork I wrote that can take C/C++ source code and translate it into *safe C#*.
+The IR translator is a commandline app written in C++20, and the encompassing tooling etc. are all written in Python.
+
+![Snippet from a generated DEX module](img/dex_0.png)
 
 ### Why?
 
@@ -30,7 +33,7 @@ Facepunch's way of making it safe to run untrusted C# on potentially thousands o
 And DEX is my way of getting around that, so I can run unsafe code in an environment where it's not supposed to be possible to run unsafe code.
 [You can read more here.](https://sbox.game/rileyzzz/retrobox/news/dex-8601de05)
 
-How?
+### How?
 
 It's a lot like the original version of Emscripten before WebAssembly, but built from the ground up for C#; it'll take all of your C/C++ source code, compile it with clang, then instead of generating machine code, it hoists the LLVM IR instructions back up into C# expressions and tidies it up into a nice minfied module for you.
 The best part is it's completely safe. No pointers, syscalls, etc. Memory in DEX is a managed byte array.
@@ -40,6 +43,7 @@ And turns out - the generated modules are actually wicked fast.
 Like, faster than it should be.
 .NET's JIT compiler has been kind of superpowered lately and somehow it's made DEX modules not only viable, but fast as hell.
 
+![Snippet from DEX's IR translator](img/dex_1.png)
 
 ## Retrogression
 
