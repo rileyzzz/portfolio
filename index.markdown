@@ -51,9 +51,8 @@ It's even a drop-in replacement for most projects' build systems, because I've p
 Replace gcc/emcc/g++/em++ with dexcc/dex++ and it'll just work.
 
 So far I've ported Doom and Quake, emulators like snes9x and mupen64plus, and LuaC.
-And turns out - the generated modules are actually wicked fast.
-Like, faster than they should be.
-.NET's JIT compiler has been kind of superpowered lately and somehow it's made DEX modules not only viable, but fast as hell.
+And turns out... the generated modules are actually wicked fast.
+Like, faster than they should be; .NET's JIT compiler has been kind of superpowered lately and somehow it's made DEX modules not only viable, but fast as hell.
 
 ![Snippet from DEX's IR translator](img/dex_1.png)
 
